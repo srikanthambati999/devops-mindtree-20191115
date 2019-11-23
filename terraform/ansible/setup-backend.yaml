@@ -2,6 +2,8 @@
 - hosts: all
   become: yes
   become_method: sudo
+  vars:
+    doc_root: "/var/www/html"
   tasks:
     - name: Install Apache Packages
       yum: name=httpd state=present
